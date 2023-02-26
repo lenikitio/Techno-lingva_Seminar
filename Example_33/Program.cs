@@ -42,9 +42,16 @@ int[] GetArray(int size, int min, int max)
 
 int CheckArray(int[] arr, int num)
 {
+    int value = 0;
      for(int i = 0; i < arr.Length; i++)
     {
-        Console.Write(arr[i] == num ? $"Ваше число найденно под номером {i+1} ": "");
+        if(arr[i] == num)
+        {
+        Console.WriteLine($"Ваше число найденно под номером {i+1} ");
+        value = i;
+        }
     }
+    if(value == 0)
+    Console.WriteLine("Вашего числа нет в массиве");
     return num;
 }
