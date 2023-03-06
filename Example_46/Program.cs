@@ -14,8 +14,11 @@ void FillBinaryArray(int m, int n, int min, int max)
     for(int i = 0; i < m; i++)
     {
         for(int j = 0; j < n; j++)
+        {
         result[i, j] = rnd.Next(min, max + 1);
-        Console.Write(result[i,j]);
+        Console.Write(result[i, j] + " ");
+        }
+        Console.WriteLine("");
     }
 }
 
